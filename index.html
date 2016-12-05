@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">	
+	<title>Services | Angular JS</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+	<script src="js/script.js"></script>
+
+
+</head>
+<body ng-app="myApp" ng-controller="myController">
+	
+Filter the capital letter from unspaced string and add the space before capital letter.<br><br><br><br><br>
+
+
+Click on button twice or type any text similar to  "angularJSTutorial"
+	<table>
+		<tr>
+			<td>Unfilter String</td>
+			<td><input type="text" ng-model="unFilter">
+			</td>
+		</tr>
+		<tr>
+			<td>Filtered Text</td>
+			<td><input type="text" ng-model="filtered" ng-bind=""></td>
+		</tr>
+		<tr>
+			<td>Filter with first letter capital if small.</td>
+			<td><strong>{{filtered | capitalizeFirstLetter}}</strong></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="submit" ng-click="transformString(unFilter)" value="Transform Text"></td>
+		</tr>
+	</table>
+
+</body>
+</html>
